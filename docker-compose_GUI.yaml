@@ -1,0 +1,95 @@
+version: "3"
+services:
+  tornode:
+    image: rob2n/tor-simple-obfs4
+    volumes: ["./torrc:/etc/tor/torrc"]
+    ports:
+      - "9050:9050"
+    restart: on-failure
+
+  api:
+    container_name: api
+    image: msc_darknet_markets_api
+    restart: on-failure
+    build:
+      context: ./app/
+      dockerfile: Dockerfile.API
+    depends_on:
+      - redis
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app
+    env_file: .env-dev
+
+  redis:
+    image: "redis:alpine"
+
+  worker1:
+    image: msc_darknet_markets_api:latest
+    container_name: nyja-worker1
+    command: rq worker --url redis://redis:6379 nyja_queue
+    restart: on-failure
+    volumes:
+      - ./app:/app
+    env_file:
+      - .env-dev
+    depends_on:
+      - redis
+    links:
+      - redis
+
+  worker2:
+    image: msc_darknet_markets_api:latest
+    container_name: nyja-worker2
+    restart: on-failure
+    command: rq worker --url redis://redis:6379 nyja_misc
+    volumes:
+      - ./app:/app
+    env_file:
+      - .env-dev
+    depends_on:
+      - redis
+    links:
+      - redis
+
+  scheduler:
+    image: msc_darknet_markets_api:latest
+    container_name: nyja-scheduler
+    command: /bin/sh -c "crontab /app/cron_schedule && crond -f"
+    restart: on-failure
+    volumes:
+      - ./app:/app
+    env_file:
+      - .env-dev
+    depends_on:
+      - redis
+    links:
+      - redis
+
+  nyja-gui-prod:
+    container_name: nyja-gui-prod
+    build:
+      context: ./app/gui/
+    ports:
+      - "1337:80"
+    depends_on:
+      - api
+
+  mongodb:
+    image: mongo:4.4.0
+    container_name: mongodb
+    env_file: .env-dev
+    ports:
+      - "27017:27017"
+
+  mongoexpress:
+    image: mongo-express:latest
+    container_name: mongoexpress
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    env_file:
+      - .env-dev
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongodb

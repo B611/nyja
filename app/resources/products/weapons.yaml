@@ -1,0 +1,48 @@
+# Weapons by categories
+handguns:
+  - Walther PPK
+  - Desert Eagle
+  - SIG Sauer
+  - 9mm
+  - Glock
+  - Beretta
+  - CZ 75
+  - CZ 85
+  - Springfield
+
+assault rifles:
+  - AK-47
+  - AK47
+  - AK-74
+  - AK74
+  - FAMAS
+  - M-16
+  - HK G3
+  - F2000
+  - AR15
+
+sniper rifles:
+  - Dragunov SVU
+  - Barrett
+  - SR9
+  - M110
+  - QBU-88
+
+rocket launchers:
+  - RPG-7
+  - AT4
+  - C-100
+  - LRAC F1
+  - RPG-7D
+  - RPG-75
+
+submachine gun:
+  - Scorpion CZ
+  - GSG 5
+  - Mini Uzi
+
+explosives:
+  - Hand grenade
+  - Fragmentation grenade
+  - RGD-5
+  - M67

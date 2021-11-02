@@ -1,0 +1,135 @@
+# Drugs by categories
+alcohol:
+  - Alcohol
+  - Grog
+  - booze
+  - hooch
+  - moonshine
+
+benzodiazepines:
+  - Benzodiazepines
+  - benzoes
+  - downers
+  - sleepers
+  - rohies
+  - roofies
+
+cannabis:
+  - Cannabis
+  - marijuana
+  - weed
+  - ganga
+  - gunja
+  - mull
+  - doobie
+  - mary jane
+  - hash
+  - bhang
+  - skunk
+  - yarndi
+
+cocaine:
+  - Cocaine
+  - coke
+  - crack
+  - toot
+  - nose candy
+  - white dust
+
+ecstasy:
+  - Ecstasy
+  - pills
+  - eccy
+  - XTC
+  - MDMA
+  - pingas
+
+GHB:
+  - GHB
+  - grievous bodily harm
+  - fantasy liquid
+  - E liquid
+  - ecstasy
+  - blue nitro
+  - GBL
+
+hallucinogens:
+  - Hallucinogens
+  - LSD
+  - psilocybin
+  - magic
+  - mushrooms
+  - DMT
+  - dimethyltryptamine
+  - datura
+  - mescaline
+  - ayahuasca
+
+inhalants:
+  - Inhalants
+  - amyl
+  - poppers
+  - bulbs
+
+ketamine:
+  - Ketamine
+  - Ket
+  - special K
+  - vitamin K
+
+mushrooms:
+  - Mushrooms
+  - Magic
+  - mushrooms
+  - shrooms
+  - mushies
+  - gold tops
+  - blue meanies
+
+methamphetamines:
+  - Methamphetamines
+  - crystal meth
+  - meth
+  - shabu
+  - ox blood
+  - whiz
+  - goey
+
+opioids:
+  - Opioids
+  - Morphine
+  - Oxycodone
+  - heroin
+  - morphine
+  - endone
+  - oxynorm
+  - oxycontinm
+  - oxy
+  - fentanyl
+  - tramadol
+  - codeine
+  - opium
+
+painkillers:
+  - Painkillers
+  - analgesics
+  - pain-killers
+  - NSAID
+  - prescription
+
+steroids:
+  - Steroids
+  - anabolic
+  - androgenic
+  - roids
+  - vets drugs
+  - Caseys
+  - peptides
+  - hormones
+
+synthetic_cannabis:
+  - Synthetic cannabis
+  - spice
+  - kronic
+  - AB-CHMINACA
+  - AB-PINACA

@@ -1,0 +1,44 @@
+version: "3"
+
+services:
+  tornode:
+    image: rob2n/tor-simple-obfs4
+    volumes: ["./torrc:/etc/tor/torrc"]
+    ports:
+      - "9050:9050"
+    restart: on-failure
+
+  indexing:
+    container_name: interactive_shell
+    stdin_open: true
+    tty: true
+    build:
+      context: ./app/
+      dockerfile: Dockerfile
+    environment:
+      - TOR_PROXY=tornode:9050
+      - MONGO_IP=mongodb:27017
+    depends_on:
+      - tornode
+    restart: on-failure
+    volumes: ["./app:/app"]
+    env_file: .env-dev
+
+  mongodb:
+    image: mongo:4.4.0
+    container_name: mongodb
+    env_file: .env-dev
+    ports:
+      - "27017:27017"
+
+  mongoexpress:
+    image: mongo-express
+    restart: on-failure
+    ports:
+      - "8081:8081"
+    env_file:
+      - .env-dev
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongodb
+    depends_on:
+      - mongodb

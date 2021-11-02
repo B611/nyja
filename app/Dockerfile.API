@@ -1,0 +1,10 @@
+FROM python:3.7-alpine
+
+WORKDIR /app
+RUN apk add --no-cache linux-headers tzdata libmagic gcc musl-dev g++
+COPY requirements_GUI.txt .
+COPY requirements.txt .
+RUN pip install -r requirements_GUI.txt
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["flask", "run"]

@@ -1,0 +1,21 @@
+name: Docker Image CI
+
+on:
+  pull_request:
+    branches:
+      - master
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Build the nyja CLI
+      run: docker-compose build && docker-compose up -d
+      
+    - name: Build the Web Application
+      run: docker-compose -f "docker-compose_GUI.yaml" build && docker-compose -f "docker-compose_GUI.yaml" up -d && wget http://localhost:5000/api
