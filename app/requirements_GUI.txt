@@ -1,0 +1,6 @@
+flask
+redis
+rq
+rq-dashboard
+jsonify
+flask-cors

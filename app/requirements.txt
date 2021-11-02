@@ -1,0 +1,9 @@
+requests
+beautifulsoup4
+pysocks
+argcomplete
+pymongo
+tqdm
+pyyaml
+python-magic
+Levenshtein
