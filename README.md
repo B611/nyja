@@ -9,13 +9,31 @@ You can install Docker Desktop by following [this link.](https://www.docker.com/
 
 ---
 
-# CLI + GUI Demo
+# GUI Demo
 
 ![Nyja CLI](files/nyja_CLI.svg)
 
+# CLI Demo
 
+![Nyja GUI](files/nyja_GUI.gif)
 
 ---
+
+## Running the GUI
+The Web Application is designed to use nyja through an easy to use interface via your web browser.
+
+Running the script in the launchers folder will start the project, create a node on the Tor network, and start services such as MongoDB.
+
+If you want to run the Web Application on GNU/Linux :
+```
+$ ./launchers/unix/run_web.sh
+```
+Or on Windows :
+```
+$ ./launchers/windows/run_web.bat
+```
+
+It will then open a nyja GUI in your default web browser.
 
 ## Running the CLI
 The CLI is a fish command-line interface with autocomplete allowing to quickly interact with nyja for advanced users.
@@ -37,22 +55,6 @@ For example, get the list of onion websites present on https://dark.fail and out
 ```
 $ nyja crawl "https://dark.fail" --output
 ```
-
-## Running the GUI
-The Web Application is designed to use nyja through an easy to use interface via your web browser.
-
-Running the script in the launchers folder will start the project, create a node on the Tor network, and start services such as MongoDB.
-
-If you want to run the Web Application on GNU/Linux :
-```
-$ ./launchers/unix/run_web.sh
-```
-Or on Windows :
-```
-$ ./launchers/windows/run_web.bat
-```
-
-It will then open a nyja GUI in your default web browser.
 
 # Browser Compatibility
 Chrome > 85 / Firefox > 77 / Safari > 13.1
