@@ -5,7 +5,7 @@ Nyja is a modular toolkit designed to help researchers study the Tor network.
 It is a cross-platform and user-friendly toolkit that allows researchers to conduct massive metadata gathering, timestamp-based archiving of websites, scheduled monitoring of indexing websites for automatic discovery of .onion links, and much more.
 
 In order to run nyja, the only required dependency is having Docker installed and running.
-You can install Docker Desktop by clicking [this link.](https://www.docker.com/products/docker-desktop)
+You can install Docker Desktop by following [this link.](https://www.docker.com/products/docker-desktop)
 
 ---
 
