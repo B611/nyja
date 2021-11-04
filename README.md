@@ -1,4 +1,4 @@
-# <img src="https://github.com/B611/MSC_Darknet_Markets/blob/master/app/gui/src/icons/spider.svg" width="48"> Nyja, the Dark Web sensing toolkit
+# <img src="https://user-images.githubusercontent.com/33053469/140389176-d365bcab-1b6a-4a01-a036-78934c64f2b1.png" width="48"> Nyja, the Dark Web sensing toolkit
 
 Nyja is a modular toolkit designed to help researchers study the Tor network.
 
@@ -30,6 +30,7 @@ $ ./launchers/unix/run_web.sh
 ```
 Or on Windows :
 ```
+
 $ ./launchers/windows/run_web.bat
 ```
 
