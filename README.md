@@ -1,9 +1,23 @@
 # <img src="https://github.com/B611/MSC_Darknet_Markets/blob/master/app/gui/src/icons/spider.svg" width="48"> Nyja, the Dark Web sensing toolkit
 
+Nyja is a modular toolkit designed to help researchers study the Tor network.
+
+It is a cross-platform and user-friendly toolkit that allows researchers to conduct massive metadata gathering, timestamp-based archiving of websites, scheduled monitoring of indexing websites for automatic discovery of .onion links, and much more.
+
 In order to run nyja, the only required dependency is having Docker installed and running.
 You can install Docker Desktop by clicking [this link.](https://www.docker.com/products/docker-desktop)
 
-# CLI
+---
+
+# CLI + GUI Demo
+
+![Nyja CLI](files/nyja_CLI.svg)
+
+
+
+---
+
+## Running the CLI
 The CLI is a fish command-line interface with autocomplete allowing to quickly interact with nyja for advanced users.
 
 Running the script in the _launchers_ folder will start the project, create a node on the Tor network, and start services such as MongoDB.
@@ -24,7 +38,7 @@ For example, get the list of onion websites present on https://dark.fail and out
 $ nyja crawl "https://dark.fail" --output
 ```
 
-# Web Application
+## Running the GUI
 The Web Application is designed to use nyja through an easy to use interface via your web browser.
 
 Running the script in the launchers folder will start the project, create a node on the Tor network, and start services such as MongoDB.
