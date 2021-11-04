@@ -15,7 +15,7 @@ https://user-images.githubusercontent.com/35844889/140379156-29686fc0-e436-4628-
 
 # CLI Demo
 
-![Nyja CLI](files/nyja_CLI.gif)
+![nyja_CLI](https://user-images.githubusercontent.com/33053469/140382499-8d738b03-7947-45b5-bfff-449d00fa9231.gif)
 
 ---
 
