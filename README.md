@@ -11,7 +11,7 @@ You can install Docker Desktop by following [this link.](https://www.docker.com/
 
 # GUI Demo
 
-![Nyja GUI](files/nyja_GUI.gif)
+![Nyja GUI](https://user-images.githubusercontent.com/35844889/140379156-29686fc0-e436-4628-9bad-6c53d092b12b.mov)
 
 # CLI Demo
 
