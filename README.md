@@ -55,6 +55,6 @@ $ ./launchers/windows/run_web.bat
 It will then open a nyja GUI in your default web browser.
 
 # Browser Compatibility
-<img src="https://i.nuuls.com/_YEEl.png">
+Chrome > 85 / Firefox > 77 / Safari > 13.1
 
 Made with ❤ by [Gabriel](https://www.linkedin.com/in/gabriel-ruaud/), [Louis](https://www.linkedin.com/in/louisanelli/) and [Robin](https://www.linkedin.com/in/Rob2n/)
